@@ -1,0 +1,12 @@
+import random
+import time
+from seleniumbase import BaseCase
+
+class TestamazonMobile(BaseCase):
+    def test_login(self):
+        self.open("https://www.amazon.in/")
+        self.maximize_window()
+        self.click(selector='//img[@alt="Mobiles"]')
+        time.sleep(3)
+        self.click(selector='//img[@src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/Mini-Events/April/FPF_10-14/Offers-you-cant-resist/xcm_banners_fpf_pop5_434x641_in-en.jpg"]')
+        time.sleep(3)
