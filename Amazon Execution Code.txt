@@ -1,12 +1,11 @@
-import random
 import time
-from seleniumbase import BaseCase
-
-class TestamazonMobile(BaseCase):
-    def test_login(self):
-        self.open("https://www.amazon.in/")
-        self.maximize_window()
-        self.click(selector='//img[@alt="Mobiles"]')
-        time.sleep(3)
-        self.click(selector='//img[@src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/Mini-Events/April/FPF_10-14/Offers-you-cant-resist/xcm_banners_fpf_pop5_434x641_in-en.jpg"]')
-        time.sleep(3)
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+driver = webdriver.Chrome(ChromeDriverManager().install())
+driver.get("https://www.amazon.in/")
+driver.maximize_window()
+# check_box_button = driver.find_element_by_id('//img[@alt="Mobiles"]')
+# check_box_button.click()
+text_box = driver.find_element_by_id(//span[@id="nav-link-accountList-nav-line-1"])
+time.sleep()
+driver.close()
